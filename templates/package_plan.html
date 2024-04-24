@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device, initial-scale=1.0">
+    <link rel="stylesheet"  href="{% static 'css/packages_plan.css' %}">
+    <link rel="stylesheet"  href="{% static 'css/media.css' %}">
+    <script  src="{% static 'js/packages_plan.js' %}" ></script>
+
+
+
+    <!-- adds the links of bootstrape ,fonts, icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <script src='http://kit.fontawesome.com/4c729db828.js' crossorigin="anonymous"></script>
+
+    <title>Adventure explorer</title>
+    <style>
+        .icon-paragraph{
+        margin-top:30px !important;
+        }
+         .body{
+        500vh:
+        }
+          .rating {
+            unicode-bidi: bidi-override;
+            width:25%;
+
+
+        }
+         .detail{
+
+    justify-content: center !important;
+    align-items: center !important;
+
+
+
+    }
+        .rating span {
+            display: inline-block;
+            position: relative;
+            width: 1.1em;
+        }
+        .rating span:before {
+            content: '★';
+            position: absolute;
+            color: gold;
+        }
+         .card {
+    width: 620px;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom:50px !important;
+    margin-top:50px !important;
+    margin-left:50px !important;
+
+}
+.rating_value{
+   margin-top:50px !important;
+   margin-left:50px !important;
+}
+
+        .card-body {
+    padding: 20px;
+    height:auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+          .card-body h6,h5 {
+    margin-bottom: 20px !important;
+}
+.card-body h4{
+font-size:4;
+}
+        .rating1{
+        margin-bottom:0px;
+
+        }
+        .comment1{
+        font-weight:400;
+        }
+        .rating_value{
+        display:flex;
+        }
+        .avg_rating{
+            display:flex;
+            padding-top:3px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="nav_bar-top">
+        <div class="text-container">
+            <div class="text-content">
+            <a href="mailto:explorer@12gmail.com" class="para-text email" style="text-decoration: none !important;margin-bottom:5px;color:black;"><span class="span_text email"><i class="fa-solid fa-envelope"></i></span>explorer@12gmail.com</a>
+            <a  href="tel:+7356379662" class="para-text email" style="text-decoration: none !important;margin-bottom:5px;color:black;"><span class="span_text email"><i class="fa-solid fa-phone"></i></span>7356379662</a>
+        </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/christo johnson"> <i  class="fa-brands icon-social fa-facebook"></i></a>
+            <a href="https://www.snapchat.com/add/christo aj" target="_blank"><i class="fa-brands icon-social fa-snapchat"></i></a>
+            <a href="https://wa.me/7356379662"><i class="fa-brands icon-social fa-whatsapp"></i></a>
+           <a href="https://www.instagram.com/christo AJ/" target="_blank"><i class="fa-brands icon-social fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/CHRISTO JOHNSON/" target="_blank"><i class="fa-brands icon-social fa-linkedin"></i></a>
+        </div>
+        <div class="navbar-container">
+            <!-- navbar bootstrap-->
+
+           <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <h3 class="heading-logo">EXPLOR<span>ER.</span></h3>
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="{% url 'home' %}">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'destination' %}">Destinations</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'packages' %}">Packages</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          FAQ
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="{% url 'about' %}">About us</a></li>
+                          <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
+
+                          <li><a class="dropdown-item" href="{% url 'register' %}">Register</a></li>
+                            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'user_profile' %}">profile</a></li>
+                        </ul>
+                      </li>
+                        <li>
+                            {% if name %}
+                            <h6 class="user" style="margin-top:10px;margin-bottom: 0px;">{{name}}</h6>
+
+                            {% endif %}
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+        </div>
+    </div>
+    <!-- nav-bar top finished-->
+    <div class="home-section">
+        <div class="container-fluid gx-0">
+
+        <!-- SLIDER-->
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+
+               <div class='home-content' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('{% static 'images/srilanka.jpg' %}');">
+                <div class="content-home">
+                    <h3 class="heading-home">Choose Your New</h3>
+                    <h2 class="heading-lg-home">Destination</h2>
+                    <a href="#" class="btn-home">Explore More</a>
+                </div>
+               </div>
+              </div>
+              <div class="carousel-item">
+                <div class="home-content img-2"  style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('{% static 'images/SF_traveltips.jpg' %}');">
+                <div class="content-home">
+                    <h3 class="heading-home">TOURS & TRAVEL </h3>
+                    <h2 class="heading-lg-home"> let's Discover the World Together</h2>
+                    <a href="#" class="btn-home">Explore More</a>
+                </div>
+               </div>
+              </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+
+              <span><i class="fa-solid icon-scroll fa-angles-left"></i></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span><i class="fa-solid icon-scroll fa-angles-right"></i></span>
+            </button>
+          </div>
+        </div>
+
+    </div>
+</div>
+<!-- header completed -->
+
+
+<!-- map section -->
+
+
+<div class="rating_value">
+    <h4 >Ratings : </h4>
+
+           <div class="avg_rating">
+              {% if average_rating %}
+               <span class="stars"><i class="fa-solid star fa-star"></i></span>
+               <p style="font-size: 16px; margin: 2; color: green;">{{ average_rating }}</p>
+              {% endif %}
+           </div>
+</div>
+
+
+<!--About us section completed -->
+
+<!-- service section completed -->
+ <section class="packages">
+
+
+                <div class="row">
+                  <div class="content">
+                      <h3> Detailed Itinerary </h3>
+                       {% for x in data2 %}
+                       <div class="route">
+                           <img class="mapicon" src="{% static 'images/icon_loc.svg' %}" alt="mapmarker">
+                           <h4 >Route : {{x.package_name}}</h4>
+                      </div>
+                      <div class="route">
+                        <img  class="mapicon"  src="{% static 'images/ICON_GOA.svg' %}" alt="goa">
+                        <h4>{{ x.total_days }} Days / {{ x.total_days|add:'-1' }} Nights</h4>
+                      </div>
+                      {% endfor %}
+                     {% for x in data %}
+                     <h1 ></h1>
+
+
+
+
+
+
+                     <div class="details">
+                         <h4>{{x.heading}}</h4>
+                        <div class="icon-paragraph">
+                          <i class="fa-solid fa-circle" style="color: #FFD43B;"></i>
+                          <p>{{x.description}}</p>
+                        </div>
+                     </div>
+
+                      {% endfor %}
+               </div>
+                    <form method="POST">
+                        {% csrf_token %}
+                         <input name="hidden_product_id" hidden type="text" value="{{x.user_id}}">
+                         <div class="mb-3">
+                             <label for="exampleFormControlInput1" class="form-label">start date</label>
+                             <select name="start_date" id="exampleFormControlInput1" >
+                                <option value="">select date</option>
+                               {% for x in package_date %}
+                                <option value="{{x.date_id}}">{{x.start_date}}</option>
+                               {% endfor %}
+                             </select>
+                         </div>
+                         <div class="mb-3">
+                            <label for="exampleFormControlInput2" class="form-label">members</label>
+                            <input name="members" type="number" id="exampleFormControlInput2" required placeholder="number of peoples">
+                         </div>
+                        <div class="booking_button">
+                            {% for x in data2 %}
+<!--                            <a href="#" class="select-btn2"    >Booking</a>-->
+                            <input name="packages_id" hidden type="text" value="{{x.packages_id}}">
+
+                            <button  class="btn select-btn2 btn-primary "  id="openFormBtn" formaction="/initiate_payment" type="submit" name="button1">Booking</button>
+                            {% endfor %}
+                        </div>
+                        {% if count <= 0 %}
+                          <p class="text-danger">No available dates for booking, select a new date for booking</p>
+                        {% endif %}
+                    </form>
+                </div>
+     {% for x in data3 %}
+<div class="detail">
+   <div class="card  "   >
+        <div class="card-body  ">
+            <h5 class="card-subtitle mb-2 text-muted">{{x.user.User_name}}</h5>
+<!--            <h4 class="card-subtitle rating1 text-muted">Ratings</h4>-->
+
+<!--            <div class="rating">-->
+<!--                {% for rating in data3 %}-->
+<!--                    {% for i in "12345"|make_list %}-->
+<!--                           {% if i <= rating.rating_value %}-->
+<!--                              &lt;!&ndash; Filled star &ndash;&gt;-->
+
+<!--                                <span>&#9733;</span>-->
+
+<!--                          {% endif %}-->
+<!--                   {% endfor %}-->
+<!--                {% endfor %}<br>-->
+<!--            </div>-->
+            <br>
+            <h5 >Review</h5>
+            <p class="comment1"> {{x.comment}}</p>
+        </div>
+   </div>
+</div>
+{% endfor %}
+
+
+ </section>
+<!-- packages part finished-->
+ <footer class="footer">
+    <div class="footer-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <h3 class="heading-logo footer-logo">EXPLOR<span>ER</span></h3>
+                    <p class="footer-para"> your place to discover the world</p>
+                    <h5 class="heading-sm-footer">FOLLOW US</h5>
+                    <div class="social-links">
+            <a href="https://www.facebook.com/christo johnson"> <i  class="fa-brands icon-social fa-facebook"></i></a>
+            <a href="https://www.snapchat.com/add/christo aj" target="_blank"><i class="fa-brands icon-social fa-snapchat"></i></a>
+            <a href="https://wa.me/7356379662"><i class="fa-brands icon-social fa-whatsapp"></i></a>
+           <a href="https://www.instagram.com/christo AJ/" target="_blank"><i class="fa-brands icon-social fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/CHRISTO JOHNSON/" target="_blank"><i class="fa-brands icon-social fa-linkedin"></i></a>
+        </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+
+                  <div class="pages-footer">
+                    <h3 class="heading-pages">Pages Links</h3>
+
+                    <!-- navbar copy from top navbar -->
+
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                          <a class="nav-link footer-links " aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link footer-links" href="#">Destinations</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link footer-links" href="#">Packages</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link footer-links" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color:gray" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          FAQ
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="{% url 'about' %}">About us</a></li>
+                          <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
+
+                          <li><a class="dropdown-item" href="{% url 'register' %}">Register</a></li>
+                            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'user_profile' %}">profile</a></li>
+                        </ul>
+                      </li>
+                      </ul>
+
+                  </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+
+                      <h3 class="heading-pages">Contact Us</h3>
+                     <p class="contact-footer">
+                        <span class="para-text" style="color:gray"> <i class="fa-solid footer-icons fa-location-dot" style="color:gray;margin-bottom:5px;"></i> 123 Street New York </span>
+                        <a href="mailto:explorer@12gmail.com" class="para-text" style="margin-bottom:5px;text-decoration: none !important;color:gray"><span class="span_text"><i class="fa-solid fa-envelope"></i></span>explorer@12gmail.com</a>
+                        <a  href="tel:+7356379662" class="para-text" style="margin-bottom:5px;text-decoration: none !important;color:gray"><span class="span_text" style="color:gray"><i class="fa-solid fa-phone" style="color:gray"></i></span>7356379662</a>
+                      </p>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container-fluid gx-0">
+            <div class="footer-rights">
+                <p class="right-para">Copyright <span><i class="fa-regular fa-copyright"></i></span>explorer. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+ </footer>
+
+</body>
+<!-- bootstap js script-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+<script src="goapackagedetail.js"></script>
+
+
+</html>
+
+

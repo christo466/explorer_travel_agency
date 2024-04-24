@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device, initial-scale=1.0">
+
+    <link rel="stylesheet"  href="{% static 'css/booking.css' %}">
+    <link rel="stylesheet"  href="{% static 'css/media.css' %}">
+
+<!--    <link rel="stylesheet" href="media.css">-->
+<!--    <link rel="stylesheet" href="style.css">-->
+    <!-- adds the links of bootstrape ,fonts, icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <script src='http://kit.fontawesome.com/4c729db828.js' crossorigin="anonymous"></script>
+<style>
+    .container1{
+    width:100%;
+    height:600px;
+    margin-top:50px;
+    }
+    .booking_container{
+    width:100%;
+    height:100%;
+    padding:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .price{
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .element2{
+    font-size:33px;
+    font-weight:600;
+    margin-top:10px;
+    }
+</style>
+    <title>Adventure explorer</title>
+</head>
+<body>
+<div class="header">
+    <div class="nav_bar-top">
+        <div class="text-container">
+            <div class="text-content">
+            <a href="mailto:explorer@12gmail.com" class="para-text email"><span class="span_text email"><i class="fa-solid fa-envelope"></i></span>explorer@12gmail.com</a>
+            <a  href="tel:+7356379662" class="para-text email"><span class="span_text email"><i class="fa-solid fa-phone"></i></span>7356379662</a>
+        </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/christo johnson"> <i  class="fa-brands icon-social fa-facebook"></i></a>
+            <a href="https://www.snapchat.com/add/christo aj" target="_blank"><i class="fa-brands icon-social fa-snapchat"></i></a>
+            <a href="https://wa.me/7356379662"><i class="fa-brands icon-social fa-whatsapp"></i></a>
+           <a href="https://www.instagram.com/christo AJ/" target="_blank"><i class="fa-brands icon-social fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/CHRISTO JOHNSON/" target="_blank"><i class="fa-brands icon-social fa-linkedin"></i></a>
+        </div>
+        <div class="navbar-container">
+            <!-- navbar bootstrap-->
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <h3 class="heading-logo">EXPLOR<span>ER.</span></h3>
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="{% url 'home' %}">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'destination' %}">Destinations</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'packages' %}">Packages</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          FAQ
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="{% url 'about' %}">About us</a></li>
+                          <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
+                          <li><a class="dropdown-item" href="{% url 'register' %}">Register</a></li>
+                            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                            <li><a class="dropdown-item" href="{% url 'user_profile' %}">profile</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+        </div>
+    </div>
+    <!-- nav-bar top finished-->
+    <div class="home-section">
+        <div class="container-fluid gx-0">
+
+        <!-- SLIDER-->
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+
+               <div class="home-content img-1 " style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('{% static 'images/srilanka.jpg' %}');">
+                <div class="content-home">
+                    <h3 class="heading-home">LET US TAKE YOU TO YOUR </h3>
+                    <h2 class="heading-lg-home"> DREAM DESTINATION</h2>
+                    <a href="{% url 'destination' %}" class="btn-home">Explore More</a>
+                </div>
+               </div>
+              </div>
+              <div class="carousel-item">
+                <div class="home-content img-2" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('{% static 'images/SF_traveltips.jpg' %}');" >
+                <div class="content-home">
+                    <h3 class="heading-home">TOURS & TRAVEL </h3>
+                    <h2 class="heading-lg-home"> let's Discover the World Together</h2>
+                    <a href="#" class="btn-home">Explore More</a>
+                </div>
+               </div>
+              </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+
+              <span><i class="fa-solid icon-scroll fa-angles-left"></i></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span><i class="fa-solid icon-scroll fa-angles-right"></i></span>
+            </button>
+          </div>
+        </div>
+
+    </div>
+</div>
+<!-- header completed -->
+<section>
+<div class="container1">
+    <div class="booking_container">
+        <form method="post" action="{% url 'payment_success' %}">
+        {% for x in data %}
+        <div class="card" style="width: 18rem;">
+              <img src="{{x.package_image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+               <h5 class="card-title" style="color:orange">{{x.package_name}}</h5>
+                <hr>
+               <div class="price">
+                   <button type="submit" id="rzp-button1" class="btn btn-outline-success element1 btn-block">Pay</button>
+                   <p class="element2">{{x.price}}</p>
+               </div>
+                <hr>
+                <div>
+                    <p>start date : {{start_date}}</p>
+                    <p>end date : {{end_date}}</p>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+<!--      <button type="submit" id="rzp-button1" class="btn btn-outline-success btn-block">Pay</button>-->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+var options = {
+    "key": "{{api_key}}", // Enter the Key ID generated from the Dashboard
+    "name": "explorer", //your business name
+    "description": " Transaction",
+    "image": "https://example.com/your_logo",
+    "order_id": "{{order_id}}", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "handler": function (response){
+        var paymentId = response.razorpay_payment_id;
+        var orderId = response.razorpay_order_id;
+        var signature = response.razorpay_signature;
+        var start_date = "{{start_date}}";
+        var end_date = "{{end_date}}";
+        var user = "{{user}}";
+        var package = "{{package}}";
+        var members = "{{members}}";
+        var price = "{{price}}";
+       window.location.href = `http://127.0.0.1:8000/payment_success/?razorpay_payment_id=${paymentId}&razorpay_order_id=${orderId}&razorpay_signature=${signature}&start_date=${start_date}&end_date=${end_date}&user=${user}&package=${package}&members=${members}&price=${price}`;
+    },
+    "prefill": { //We recommend using the prefill parameter to auto-fill customer's contact information, especially their phone number
+        "name": "Gaurav Kumar", //your customer's name
+        "email": "gaurav.kumar@example.com",
+        "contact": "9000090000"  //Provide the customer's phone number for better conversion rates
+    },
+
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+rzp1.on('payment.failed', function (response){
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+});
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+</script>
+        </form>
+    </div>
+</div>
+
+</section>
+<!-- packages part finished-->
+ <footer class="footer">
+    <div class="footer-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <h3 class="heading-logo footer-logo">EXPLOR<span>ER. </span></h3>
+                    <p class="footer-para"> your place to discover the world</p>
+                    <h5 class="heading-sm-footer">FOLLOW US</h5>
+                    <div class="social-links">
+            <a href="https://www.facebook.com/christo johnson"> <i  class="fa-brands icon-social fa-facebook"></i></a>
+            <a href="https://www.snapchat.com/add/christo aj" target="_blank"><i class="fa-brands icon-social fa-snapchat"></i></a>
+            <a href="https://wa.me/7356379662"><i class="fa-brands icon-social fa-whatsapp"></i></a>
+           <a href="https://www.instagram.com/christo AJ/" target="_blank"><i class="fa-brands icon-social fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/CHRISTO JOHNSON/" target="_blank"><i class="fa-brands icon-social fa-linkedin"></i></a>
+        </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+
+                  <div class="pages-footer">
+                    <h3 class="heading-pages">Pages Links</h3>
+
+                    <!-- navbar copy from top navbar -->
+
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                          <a class="nav-link footer-links " aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link footer-links" href="#">Destinations</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link footer-links" href="#">Packages</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link footer-links" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link footer-links dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            FAQ
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">About us</a></li>
+                            <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            <li><a class="dropdown-item" href="register.html">Register</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                  </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+
+                      <h3 class="heading-pages">Contact Us</h3>
+                      <p class="contact-footer">
+                        <span class="para-text"> <i class="fa-solid footer-icons fa-location-dot"></i> 123 Street New York </span>
+                        <a href="mailto:explorer@12gmail.com" class="para-text"><span class="span_text"><i class="fa-solid fa-envelope"></i></span>explorer@12gmail.com</a>
+                        <a  href="tel:+7356379662" class="para-text"><span class="span_text"><i class="fa-solid fa-phone"></i></span>7356379662</a>
+                      </p>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container-fluid gx-0">
+            <div class="footer-rights">
+                <p class="right-para">Copyright <span><i class="fa-regular fa-copyright"></i></span> adventure explorer. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+ </footer>
+<script>
+
+    function myFunction() {
+        window.location.href = 'http://127.0.0.1:5500/destination.html';
+    }
+  </script>
+
+</body>
+<!-- bootstap js script-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+
+
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+   {% load static %}
+    {% load socialaccount %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device, initial-scale=1.0">
+    <link rel="stylesheet"  href="{% static 'css/login.css' %}">
+    <link rel="stylesheet"  href="{% static 'css/media.css' %}">
+    <script  src="{% static 'js/login.js' %}" ></script>
+</head>
+<style>
+    .input-box{
+    margin-top:0 !important;
+    }
+
+        .error-message {
+            color: red;
+        }
+
+</style>
+<body>
+    <h2>Login</h2>
+    <div class="wrapper">
+    <div class="container main">
+        <div class="row">
+            <div class="col-md-6 right">
+
+             <div class="input-box">
+                <form method="post"  id="form" >
+                {% csrf_token %}
+                 <h1 class="log">USER LOGIN</h1>
+                 <div class="input-field">
+
+                    <input type="text"  name="username" id="username"  placeholder="user name">
+                     <div class="error-message">{% if username_error %}{{ username_error }}{% endif %}</div>
+                 </div>
+                 <div class="input-field">
+
+                    <input type="password" name="password" id="password"  placeholder="password">
+                     <div class="error-message">{% if password_error %}{{ password_error }}{% endif %}</div>
+                 </div>
+                 <div class="change-pass">
+                    <a class="change" href="{% url 'forgotpassword' %}">FORGOT PASSWORD <span >?</span></a>
+                    <a class="register" href="{% url 'register' %}">REGISTER <span >?</span></a>
+                 </div>
+
+                 <div class="input-field">
+
+                        <button type="submit" class="submit"  >Login</button>
+                 </div>
+
+                    <a  href="{% url 'account_login' %}">Login by git hub  account</a>
+                </form>
+             </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
